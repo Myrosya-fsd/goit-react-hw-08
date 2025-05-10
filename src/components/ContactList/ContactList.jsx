@@ -1,30 +1,39 @@
+import css from "./ContactList.module.css";
+import Loader from "../../components/Loader/Loader";
 import { useSelector, useDispatch } from "react-redux";
-import Contact from "../Contact/Contact";
-import { deleteContact } from "../../redux/contactsOps";
-import { selectFilteredContacts } from "../../redux/contactsSlice";
-import styles from "./ContactList.module.css";
-import { selectError, selectLoading } from "../../redux/contactsSlice";
+import ContactItem from "../Contact/Contact";
+import { fetchContacts } from "../../redux/contacts//operations";
+import { useEffect } from "react";
+import {
+  selectIsLoading,
+  selectFilterContacts,
+} from "../../redux/contacts/selectors";
 
 const ContactList = () => {
+  const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
-  const contacts = useSelector(selectFilteredContacts);
 
-  const isLoading = useSelector(selectLoading);
-  const error = useSelector(selectError);
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
-  const handleDelete = (id) => {
-    dispatch(deleteContact(id));
-  };
+  const filterContacts = useSelector(selectFilterContacts);
 
   return (
     <>
-      <ul className={styles.list}>
-        {contacts.map((contact) => (
-          <Contact key={contact.id} contact={contact} onDelete={handleDelete} />
-        ))}
-      </ul>
-      {isLoading && <h2>Loading...</h2>}
-      {error && <h2>Server is dead...</h2>}
+      {isLoading && <Loader />}
+      <div className={css.wrapper}>
+        <ul className={css.list}>
+          {filterContacts.map((contact) => (
+            <ContactItem
+              key={contact.id}
+              id={contact.id}
+              name={contact.name}
+              number={contact.number}
+            />
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

@@ -1,0 +1,26 @@
+.form {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.button {
+  color: #5a539b;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  padding: 6px 15px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5a539b;
+  color: #fff;
+}
+
+.email {
+  color: #fff;
+}

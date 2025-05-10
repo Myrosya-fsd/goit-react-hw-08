@@ -1,0 +1,96 @@
+.form {
+  width: 350px;
+  border: 1px solid #ccc;
+  margin: 120px auto 0;
+  border-radius: 8px;
+  padding: 40px 40px;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  color: #5a539b;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  color: #2c3d50;
+  opacity: 0.7;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #2c3d50;
+  height: 35px;
+  padding-left: 18px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #ccc;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.input:focus {
+  border-color: #5a539b;
+}
+
+.button {
+  padding: 12px 0;
+  border: none;
+  background-color: #5a539b;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 268px;
+  margin: 15px 0;
+}
+
+.button:hover {
+  background-color: #48427e;
+  color: #fff;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.text {
+  font-size: 16px;
+  color: #2c3d50;
+}
+
+.navLink {
+  color: #5a539b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #48427e;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

@@ -1,0 +1,44 @@
+.hero {
+  padding: 200px 30px 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #a0caea;
+}
+
+.title {
+  color: rgb(85, 80, 80);
+  font-size: 65px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.span {
+  color: #5a539b;
+}
+
+.subtitle {
+  color: #5a539b;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.navlink {
+  width: 200px;
+  padding: 10px 25px;
+  background-color: #5a539b;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  background-color: #48427e;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  margin-top: 130px;
+  display: flex;
+}
+
+.contactsWrapper {
+  width: 100%;
+  padding-left: 80px;
+}
+
+.h2 {
+  color: #5a539b;
+  font-size: 40px;
+  margin-bottom: 20px;
+}

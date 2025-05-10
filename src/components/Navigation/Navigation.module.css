@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  height: 75px;
+}
+
+.navlink {
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navlink:hover,
+.navlink:active {
+  color: #a69ef6;
+}
